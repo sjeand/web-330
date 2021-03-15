@@ -1,2 +1,4 @@
-# web-330
-web-330 Enterprise JavaScript II
+# web-330 Enterprise JavaScript II
+## Contributors
+### Professor Krasso
+### Sarah Jean Baptiste
