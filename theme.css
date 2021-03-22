@@ -1,0 +1,162 @@
+/**
+    Title: site.css
+    Author: Sarah Jean Baptiste
+    Date: 03/15/2021
+    Description: Style sheet for web-330
+*/
+
+/* Styling for light-theme variables */
+body.light-theme{
+    --text-color: #000;
+    --background-color: #fff;
+    --anchor-color: #4F3674;
+    --h1-background-color: #3c275a;
+    --h1-border-color: #D6A800;
+    --heading-background-color: #3c275a;
+    --heading-color: #fff;
+    --heading-border-color: #D6A800;
+    --anchor-hover-color: #4F3674;
+    --anchor-hover-background-color: #D6A800;
+    --card-background-color: #fff;
+    --card-title-color: #4F3674;
+    --btn-background-color: #4F3674;
+    --btn-color: #fff;
+    --btn-hover-background-color: #D6A800;
+    --btn-hover-color: #4F3674;
+    --input-border-color: #ccc; 
+}
+
+/* Styling for dark-theme variables */
+body.dark-theme{
+    --text-color: #fafafa;
+    --background-color: #303030;
+    --anchor-color: #fff;
+    --h1-background-color: #9c27b0;
+    --h1-border-color: #9c27b0;
+    --heading-background-color: #424242;
+    --heading-color: #fff;
+    --heading-border-color: #424242;
+    --anchor-hover-color: #D176e1;
+    --anchor-hover-background-color: #303030;
+    --card-background-color: #424242;
+    --card-title-color: #D176e1;
+    --btn-background-color: #D176e1;
+    --btn-color: #fff;
+    --btn-hover-background-color: #7d4787;
+    --btn-hover-color: #fff;
+    --input-border-color: #303030; 
+}
+
+/* Body styling */
+body{
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Anchor styling with variables */
+a{
+    color: var(--anchor-color);
+    text-decoration: none;
+}
+
+/* Anchor hover styling with variables */
+a.hover{
+    background-color: var(--anchor-hover-background-color);
+    color: var(--anchor-hover-color);
+}
+
+/* Heading 1 styling with variables */
+h1{
+    color: var(--heading-color);
+    background-color: var(--h1-background-color);
+    padding: 10px;
+    border: solid 1px;
+    border-color: var(--h1-border-color);
+}
+
+/* Heading styling for 2-4.*/
+h2, h3, h4{
+    color: var(--heading-color);
+    background-color: var(--h1-background-color);
+    padding: 10px;
+    border: solid 1px;
+    border-color: var(--h1-border-color);
+}
+
+/* card styling */
+
+/*card*/
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: .3s;
+    background-color: var(--card-background-color);
+}
+  
+/*card-title*/
+.card-title{
+    text-align: center;
+    font-size: 2em;
+    color: var(--card-title-color);
+    font-weight: 400;
+}
+  
+/*card-content*/
+.card-content{
+    padding: 2px 16px;
+}
+  
+/*card:hover*/
+.card:hover{
+    box-shadow:0 8px 16px 0 rgba(0, 0, 0, 0.2)
+}
+
+/*button styling*/
+
+/*btn*/
+.btn{
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 15px 32px;
+    color:black;
+}
+  
+/*btn-primary*/
+.btn-primary{
+    background-color: var(--btn-background-color);
+    color: var(--btn-color);
+}
+  
+/*btn-primary:hover*/
+.btn-primary:hover{
+    background-color: var(--btn-hover-background-color);
+    color: var(--btn-hover-color);
+}
+  
+/*form styling*/
+  
+/*input*/
+.input{
+    padding:12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/*forms with forms requirements*/
+.drop-down-menu{
+    padding:12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
