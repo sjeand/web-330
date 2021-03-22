@@ -113,7 +113,7 @@ h2, h3, h4{
 
 /*button styling*/
 
-/*btn*/
+/*btn styling*/
 .btn{
     border: none;
     text-align: center;
@@ -126,7 +126,8 @@ h2, h3, h4{
     color:black;
 }
   
-/*btn-primary*/
+/*btn-primary styling
+*/
 .btn-primary{
     background-color: var(--btn-background-color);
     color: var(--btn-color);

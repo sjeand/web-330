@@ -10,7 +10,7 @@
     margin: 50px 100px auto 100px;
 }
 
-/* Icon-mode styling on hover*/
+/* Icon-mode styling when mouse hovers*/
 #icon-mode:hover{
     cursor: pointer;
 }
