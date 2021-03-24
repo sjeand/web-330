@@ -1,81 +1,84 @@
-/**
-    Title: site.css
-    Author: Sarah Jean Baptiste
-    Date: 03/15/2021
-    Description: Style sheet for web-330
+/*
+==========================================
+  Title: site.css
+  Author: Professor Krasso
+  Date: 03/15/2021
+  Modified by: Sarah Jean Baptiste
+  Description: Site CSS
+==========================================
 */
 
 /* Container styling */
-#container{
+#container {
     margin: 50px 100px auto 100px;
 }
 
 /* Icon-mode styling when mouse hovers*/
-#icon-mode:hover{
+#icon-mode:hover {
     cursor: pointer;
 }
 
 /* Icon-text styling*/
-#icon-text{
+#icon-text {
     padding-left: 10px;
 }
 
 /* Pull-right styling*/
-.pull-right{
+.pull-right {
   float: right;  
 }
 
 /* App-header styling */
-.app-header{
+.app-header {
     text-align: center;
     font-weight: 400;
 }
 
 /*Return-home anchor styling.*/
-.return-home{
+.return-home {
     color:#4f3674;
     text-decoration: none;
 }
   
 /*Return-home anchor on hover will have background of d6a800, font color of 4f3674*/
-.return-home a :hover{
+.return-home a :hover {
     background-color: #4f3674;
     color:#d6a800
 }
   
 /*Return-home anchor on visited will have text color of 3c275a*/
-.return-home a :visited{
+.return-home a :visited {
     color:#3c275a
 }
 
 /*full-width styling.*/
-.full-width{
+.full-width {
     width:100%;
 }
   
 /*form styling.*/
-.form{
+.form {
     display:inline-grid;
     grid-template-columns: auto;
 }
   
 /*form-field styling.*/
-.form-field{
+.form-field {
     padding:20px;
 }
 
 /*Assign container card styling.*/
-.assign-container{
+.assign-container {
     padding: 10px;
 }
 
 /*Assign content card styling.*/
-.assign-content{
+.assign-content {
     width: 600px;
     margin: 3% auto 0;
 }
 
 /*Assign results card styling.*/
-.assign-results-text{
+.assign-results-text {
     font-size: 28px;
 }

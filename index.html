@@ -1,8 +1,11 @@
 <!--
+==========================================
   Title: Assignment 1.3
-  Author: Sarah Jean Baptiste
+  Author: Professor Krasso
   Date: 03/15/2021
-  Description: index.html for web-330
+  Modified by: Sarah Jean Baptiste
+  Description: Landing page for WEB-330
+==========================================
 -->
 
 <!DOCTYPE html> 
@@ -12,86 +15,95 @@
 <head> 
   <title>WEB 330 - Enterprise JavaScript II</title> 
 
+  <!-- CSS stylesheets-->
   <link href="site.css" rel="stylesheet" type="text/css"> 
-  <link href="theme.css" rel="stylesheet" type="text/css"> 
+  <link href="theme.css" rel="stylesheet" type="text/css">
+
+  <!--Additional JavaScript-->
+  <script src="theme.js"></script>
+  
+  <!-- CDN stylesheets-->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">   
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+  
 </head> 
 
 <!--Document Body Starts here.-->
 <body class="light-theme">
 
-  <div id="container">
-
   <!-- Toggle icon to allow users to switch from light to dark mode.-->
-  <i onclick="toggleMode()" id="icon-mode" class="fa fa-toggle-off pull-right" style="font-size: 28px;"><span id="icon-text"></span></i>
+  <i onclick="toggleMode(this)" id="icon-mode" class="fa fa-toggle-off pull-right" style="font-size: 18px; margin-top: -30px; margin-right: 100px;"><span id="icon-text"></span></i>
+  
+    <div id="container">
 
-    <!--Main headings for landing page.-->
-    <h1>Sarah Jean Baptiste's Landing Page</h1>
-    <h2>WEB 330 Enterprise JavaScript II</h2>
-    <hr>
+      <!--Main headings for landing page.-->
+      <h1>Sarah Jean Baptiste's Landing Page</h1>
+      <h2>WEB 330 Enterprise JavaScript II</h2>
 
-    <!--List of weekly assignments and show completed assignments.-->
-    <h3>Weekly Assignments</h3>
+      <hr>
+
+      <!--List of weekly assignments and show completed assignments.-->
+      <h3>Weekly Assignments</h3>
+        <ul>
+          <li>Assignment 2.2</li>
+          <li>Assignment 3.2</li>
+          <li>Assignment 4.2</li>
+          <li>Assignment 5.2</li>
+          <li>Assignment 6.2</li>
+          <li>Assignment 7.2</li>
+          <li>Assignment 8.2</li>
+        </ul>
+
+      <!--Class projects for web-330-->
+      <h3>Projects</h3>
       <ul>
-        <li>Assignment 2.2</li>
-        <li>Assignment 3.2</li>
-        <li>Assignment 4.2</li>
-        <li>Assignment 5.2</li>
-        <li>Assignment 6.2</li>
-        <li>Assignment 7.2</li>
-        <li>Assignment 8.2</li>
+        <li>Personal Portfolio</li>
+        <li><a href="https://sjeand.github.io/web-231/" target="_blank">Web 231's Landing Page</a></li>
       </ul>
 
-    <!--Class projects for web-330-->
-    <h3>Projects</h3>
-    <ul>
-      <li>Personal Portfolio</li>
-      <li><a href="https://sjeand.github.io/web-231/" target="_blank">Web 231's Landing Page</a></li>
-    </ul>
-
-    <!--Important links for class.-->
-    <h4>Important Links</h4>
-    <ul> 
-      <!-- hyperlinks below will open in a new tab when clicked upon.-->
-      <li><a href="https://github.com/buwebdev/web-330" target="_blank">WEB 330's GitHub Repository</a></li>
-      <li><a href="https://bruinconnect.bellevue.edu/" target="_blank">BRUIN Connect</a></li> 
-      <li><a href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a></li> 
-      <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validator</a> </li> 
-      <li><a href="https://www.w3schools.com/html/" target="_blank">HTML Tutorial</a></li> 
-      <li><a href="https://www.w3schools.com/js/js_best_practices.asp" target="_blank">JavaScript Best Practices</a></li>  
-    </ul> 
-  </div>
+      <!--Important links for class.-->
+      <h4>Important Links</h4>
+      <ul> 
+        <!-- hyperlinks below will open in a new tab when clicked upon.-->
+        <li><a href="https://github.com/buwebdev/web-330" target="_blank">WEB 330's GitHub Repository</a></li>
+        <li><a href="https://bruinconnect.bellevue.edu/" target="_blank">BRUIN Connect</a></li> 
+        <li><a href="https://validator.w3.org/" target="_blank">W3C HTML Validator</a></li> 
+        <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validator</a> </li> 
+        <li><a href="https://www.w3schools.com/html/" target="_blank">HTML Tutorial</a></li> 
+        <li><a href="https://www.w3schools.com/js/js_best_practices.asp" target="_blank">JavaScript Best Practices</a></li>  
+      </ul> 
+    </div>
 
   <script>
-    //Function to set Default Theme. 
-    function setDefaultTheme()
-    {
-      const theme = localStorage.getItem(key: "mode") || "light-theme";
-      const iconMode = localStorage.getItem(key: "iconMode") || "fa-toggle-off";
-      const iconText = localStorage.getItem(key: "iconText") || "Light Mode";
-
-      document.body.classList.value = theme;
-      document.getElementById(elementId: "icon-mode").classList.add(iconMode);
-      document.getElementById(elementId: "icon-text").innerHTML= iconText;
-    }
-
-    //Function to set selected theme.
-    function setSelectedTheme()
-    {
-      document.body.classList.value = localStorage.getItem(key: "mode") || "light-theme";
-    }
-
-    //Call setDefaultTheme function
-    setDefaultTheme();
-
-    // Function for toggleMode
+    // ToggleMode function to switch themes
     function toggleMode(x)
     {
-      let colorTheme = document.body.classList; //get the body's CSS class
+      let colorTheme = document.body.classList; 
       let iconMode = x.classList;
+
+        //If the current theme is in light mode, switch users preference to dark mode.
+        if (colorTheme.value === "light-theme")
+        {
+            localStorage.clear();
+            localStorage.setItem("mode", "dark-theme");
+            localStorage.setItem("iconMode", "fa-toggle-on");
+            localStorage.setItem("iconText", "Dark Mode");
+        }
+        //Or if the current theme is in dark mode, switch users preference to light mode.
+        else
+        {
+            localStorage.clear();
+            localStorage.setItem("mode", "light-theme");
+            localStorage.setItem("iconMode", "fa-toggle-off");
+            localStorage.setItem("iconText", "Light Mode");
+        }
+        //Apply updated user selection.
+        colorTheme.value = localStorage.getItem("mode");
+        iconMode.value = `fa ${localStorage.getItem("iconMode")} pull-right`;
+        document.getElementById("icon-text").innerHTML = localStorage.getItem("iconText");
     }
+
   </script>
 </body>
 </html>
