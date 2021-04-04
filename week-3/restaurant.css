@@ -1,0 +1,37 @@
+/**
+=======================================================
+Title: restaurant.css
+Author: Sarah Jean Baptiste
+Date: 04/03/2021
+Description: Style sheet for restaurant app
+========================================================
+*/
+
+/* Grid container Styling */
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1px;
+    row-gap: 20px;   
+}
+
+/* Grid item (beverages) Styling */
+.grid-item-beverages{
+    margin: 10px -8px -15px -5px;
+}
+
+/* Grid item (appetizers) Styling */
+.grid-item-appetizers{
+    margin: 10px -5px -15px -5px;
+}
+
+/* Grid item (main course) Styling */
+.grid-item-main-course{
+    height: 179px;
+    margin: 10px -8px 5px -5px;
+}
+
+/* Grid item (dessert) Styling */
+.grid-item-desserts{
+    margin: 10px -5px 5px -5px;
+}
