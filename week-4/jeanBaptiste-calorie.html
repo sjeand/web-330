@@ -1,0 +1,131 @@
+<!--
+==========================================
+  Title: Assignment 4.2
+  Author: Professor Krasso
+  Date: 04/04/2021
+  Modified by: Sarah Jean Baptiste
+  Description: Calorie App
+==========================================
+-->
+
+<!DOCTYPE html> 
+<html lang="en">
+
+    <!--Document header starts here.-->
+    <head> 
+    <title>WEB 330 - Enterprise JavaScript II</title> 
+
+    <!-- CSS stylesheets-->
+    <link href="../site.css" rel="stylesheet" type="text/css"> 
+    <link href="../theme.css" rel="stylesheet" type="text/css">
+    <link href="jeanBaptiste-calorie.css" rel="stylesheet" type="text/css">
+    
+    
+    <!-- CDN stylesheets-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    </head> 
+
+    <!--Document Body Starts here.-->
+    <body class="light-theme">
+        
+
+        <div class="assign-container">
+
+        <!-- Toggle icon to allow users to switch from light to dark mode.-->
+        <i onclick="toggleMode(this)" id="icon-mode" class="fa fa-toggle-off pull-right" style="font-size: 18px; margin-right: 100px;"><span id="icon-text"></span></i>
+
+            <!--Heading one Welcome to the Calorie App!-->
+            <h1 class="app-header">Welcome to the Calorie App!</h1>
+
+            <!--Card to display calorie search form with text field and button to initiate search.-->
+            <div class="assign-content">
+                <div class ="card">
+                    <div class="card-title">Calorie Search Form</div>
+                    <div class="card-content">
+                        <div class="form">
+                            <div class="form-field">
+                                <label for="txtFoodItem">Enter a food item:</label>
+                                <input type="text" class="input" id="txtFoodItem" name="foodItem">
+                                <span id= "foodList"></span>
+                            </div>
+                            
+                            <!--Button to search for food model data based on user input.-->
+                            <div class="form-field">
+                                <button type="button" class="btn btn-primary full-width" id="btnSearch">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Return link to landing page-->
+        <div class="assign-content">
+            <a class="return-home" href="https://sjeand.github.io/web-330/">Return</a>
+        </div>
+        <!--Card that will show results for calories based on user input.-->
+        <div class="assign-container">
+
+            <div class="assign-content">
+                <div class="card">
+                    <div class="card-title">Search Results</div>
+                        <div id="assign-results-header" style="padding: 20px;"></div>
+                        <div class="card-content assign-results-text" id="assign-results" style="text-align: center;">
+                            
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!--JavaScript file for toggle-button-->
+        <script src= "toggle-button.js"></script>
+
+        <!--JavaScript-->
+        <script type="module">
+
+            // Import calorieConverter from calorie-converter file. 
+            import { CalorieConverter } from "./calorie-convertor.js"; 
+
+            // Assign txtFoodItemEl to the element with id txtFoodItem.
+            let txtFoodItemEl = document.getElementById("txtFoodItem");
+
+            // Onclick function for button.
+            document.getElementById("btnSearch").onclick = function () {
+                const txtFoodItem  = txtFoodItemEl.value; 
+                const foods = CalorieConverter.find(txtFoodItem);
+                let tableData = "";
+
+                //table to display food name and food calories based on user choice. 
+                for (const food of foods){
+                    tableData = tableData + "<tr><td>" + food.name + "</td><td>" + food.calories + "</td></tr>";
+                }
+                let table = "<table class = 'table'><tr><th>Name</th><th>Calories</th></tr>" + tableData + "</table>";
+                document.getElementById("assign-results").innerHTML = table; 
+            }
+
+            // Event listener to allow user to use the enter key to activate button.
+            txtFoodItemEl.addEventListener("keyup", event => {
+                if(event.keyCode == 13){
+                    document.getElementById("btnSearch").click();  
+                }
+            });
+
+            // Assign foodList to calorie converter data. 
+            const foodList = CalorieConverter.data;
+
+            // List of examples of possible foods the user may type in.
+            let foodListData = "(Ex: ";
+            for(const food of foodList){
+                foodListData = foodListData + food.name + ", ";
+            }
+            foodListData = foodListData.substring(0, foodListData.length-2) + ")"; //remove the space and comma from the list and add a closing bracket. 
+
+            // get foodList from foodListData
+            document.getElementById("foodList").innerText = foodListData; 
+
+        </script>
+    </body>
+</html>

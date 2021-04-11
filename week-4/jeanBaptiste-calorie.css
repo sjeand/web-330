@@ -1,0 +1,16 @@
+/**
+=======================================================
+Title: restaurant.css
+Author: Sarah Jean Baptiste
+Date: 04/03/2021
+Description: Style sheet for restaurant app
+========================================================
+*/
+
+/* Food List Styling */
+#foodList{
+    float:left;
+    color:#df546a;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
