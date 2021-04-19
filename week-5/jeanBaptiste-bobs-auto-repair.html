@@ -1,0 +1,151 @@
+<!--
+==========================================
+  Title: Assignment 5.2
+  Author: Professor Krasso
+  Date: 04/04/2021
+  Modified by: Sarah Jean Baptiste
+  Description: Bob's Automotive Repair Shop
+==========================================
+-->
+
+<!DOCTYPE html> 
+<html lang="en">
+
+    <!--Document header starts here.-->
+    <head> 
+    <title>WEB 330 - Enterprise JavaScript II</title> 
+
+    <!-- CSS stylesheets-->
+    <link href="../site.css" rel="stylesheet" type="text/css"> 
+    <link href="../theme.css" rel="stylesheet" type="text/css">
+    <link href="jeanBaptiste-bobs-auto-repair.css" rel="stylesheet" type="text/css">
+    
+    
+    <!-- CDN stylesheets-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    </head> 
+
+    <!--Document Body Starts here.-->
+    <body class="light-theme">
+        
+
+        <div class="assign-container">
+
+        <!-- Toggle icon to allow users to switch from light to dark mode.-->
+        <i onclick="toggleMode(this)" id="icon-mode" class="fa fa-toggle-off pull-right" style="font-size: 18px; margin-right: 100px;"><span id="icon-text"></span></i>
+
+            <!--Heading one Welcome to Bobs Automotive Repair Shop!-->
+            <h1 class="app-header">Welcome to Bob's Automotive Repair Shop!</h1>
+
+            <!--Card to display product listings.-->
+            <div class="assign-content">
+                <div class ="card">
+                    <div class="card-title">Product Listing<br>
+                    <!--Cart-component class to display cart icon and cart-count.-->
+                    <cart-component></cart-component>
+                    </div>
+                    <div class="card-content">
+                        <div class="form">
+                            <div class="form-field">
+                                <!--Drop down menu for user to choose a product-->
+                                <label for="txtProductChoice">Choose a product:</label>
+                                <select name="products" id="productList" class="drop-down-menu">
+                                    <option value="Select">--Select--</option>
+                                    <option value="19.99">Oil Change</option>
+                                    <option value="18.44">Filter Replacement</option>
+                                    <option value="9.99">Wiper Fluid Refill</option>
+                                </select>
+                                <i id="cart-message">To view your shopping cart click on the cart icon</i> <!--Message to prompt users to click cart to see the items in their shopping cart. -->
+                            </div>
+                            
+                            <!--Button to add products to cart.-->
+                            <div class="form-field">
+                                <button type="button" class="btn btn-primary" id="btnAddProduct">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Return link to landing page-->
+        <div class="assign-content">
+            <a class="return-home" href="../index.html">Return</a>
+        </div>
+        <!--Card that will show shopping cart based on users choices.-->
+        <div class="assign-container">
+            <div class="assign-content">
+                <div class="card">
+                    <div class="card-title">Shopping Cart</div>
+                        <div id="assign-results-header" style="padding: 20px;"></div> 
+                        <!--Table to display each products ID, Name and Price. -->
+                        <div class="table" id="shopping-cart" style="text-align: center;"> 
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!--JavaScript file for toggle-button-->
+        <script src= "toggle-button.js"></script> <!--ASK TUTOR ABOUT KRASSOS CORRECTIONS-->
+
+        <!--JavaScript-->
+        <script type="module">
+
+            //Import product, shoppingCart, and CartComponent from files. 
+            import { Product } from './product.js';
+            import { ShoppingCart } from './shopping-cart.js';
+            import { CartComponent } from './cart-component.js';
+
+            let shoppingCart = new ShoppingCart();
+
+            // Call setCartCount function, get element and add count function. 
+            setCartCount();
+            function setCartCount(){
+               let cartCountDiv = document.getElementById('cart-count');
+               let count = shoppingCart.count();
+               cartCountDiv.innerHTML = count;
+            }
+
+            // Onclick function for add to cart button.
+            document.getElementById("btnAddProduct").onclick = function() {
+                let productList = document.getElementById('productList');
+                let product = productList.options[productList.selectedIndex].text; // Get product name.
+                let productValue = productList.options[productList.selectedIndex].value; //Get product price. 
+                // If anything other than select is selected add name and price to cart.
+                if (productValue != "Select"){
+                    shoppingCart.add(new Product(product, productValue));
+                    setCartCount();
+                    // Create alert to tell users item was added to cart.
+                    alert(product + " was added to your shopping cart!");
+                    productList.selectedIndex = 0;
+                }
+
+            };
+
+            //Create an onclick event to display shopping cart when users click the cart icon.
+            document.getElementById("cartIcon").onclick = function() {
+                let cartDisplayTable = document.querySelector("#shopping-cart tbody");
+                let rows = "";
+                for (const product of shoppingCart) {
+                    rows += `<tr><td>${product.id}</td><td>${product.name}</td><td>${product.price}</td></tr>`; // Add ID, name, and price for each product selected.
+                }
+                // Display in table.
+                cartDisplayTable.innerHTML = rows;
+            }
+
+
+        </script>
+    </body>
+</html>
