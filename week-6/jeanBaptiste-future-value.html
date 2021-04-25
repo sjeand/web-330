@@ -1,0 +1,190 @@
+<!--
+==========================================
+  Title: Assignment 4.2
+  Author: Professor Krasso
+  Date: 04/04/2021
+  Modified by: Sarah Jean Baptiste
+  Description: Calorie App
+==========================================
+-->
+
+<!DOCTYPE html> 
+<html lang="en">
+
+    <!--Document header starts here.-->
+    <head> 
+    <title>WEB 330 - Enterprise JavaScript II</title> 
+
+    <!-- CSS stylesheets-->
+    <link href="../site.css" rel="stylesheet" type="text/css"> 
+    <link href="../theme.css" rel="stylesheet" type="text/css">
+    <link href="jeanBaptiste-future-value.css" rel="stylesheet" type="text/css">
+    <link href="flex-layout.css" rel="stylesheet" type="text/css">
+    
+    
+    
+    <!-- CDN stylesheets-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    </head> 
+
+    <!--Document Body Starts here.-->
+    <body class="light-theme">
+        
+
+        <div class="assign-container">
+
+        <!-- Toggle icon to allow users to switch from light to dark mode.-->
+        <i onclick="toggleMode(this)" id="icon-mode" class="fa fa-toggle-off pull-right" style="font-size: 18px; margin-right: 100px;"><span id="icon-text"></span></i>
+
+            <!--Heading one Welcome to the Calorie App!-->
+            <h1 class="app-header">Welcome to the Future App!</h1>
+
+            <!--Card to display calorie search form with text field and button to initiate search.-->
+            <div class="assign-content">
+                <div class ="card container">
+                    <div class="card-title row">
+                        <div class ="col-12">Future Value Calculator</div>
+                    </div> 
+                    <div class="row">
+                        <div class="col-12 danger" id="errorLog"></div>
+                    </div>
+                    <div class="card-content">
+                        <div class="form">
+                            <div class="row">
+                                <div class="col-5"><label class = "form-label" for="txtMonthlyPayment">Monthly Payment:</label></div>
+                                <div class="col-7"><input type="text" class="input" id="txtMonthlyPayment" name="foodItem"></div>
+                            </div>
+                            <div class= "row">
+                                <div class="col-5"><label class = "form-label" for="txtYearlyRate">Interest Rate:</label></div>
+                                <div class="col-7"><input type="text" class="input" id="txtYearlyRate" name="foodItem"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5"></div>
+                                <div class="col-7"><i class="danger">Enter 11% as 11.1:</i></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5"><label class = "form-label" for="listNumOfYears">Number of Years:</label></div>
+                                <div class="col-7"><select name="products" id="listNumOfYears" class="drop-down-menu">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option> <!--PAGE 8 #3-6!!!!-->
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select></div>
+                            </div>
+                            
+                            <!--Button to search for food model data based on user input.-->
+                            <div class="row">
+                                <div class= "col-1"></div>
+                                <div class= "col-6"><button type="button" class="btn btn-primary full-width" id="btnCalculate">Calculate</button></div>
+                                <div class="col-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Return link to landing page-->
+        <div class="assign-content">
+            <a class="return-home" href="https://sjeand.github.io/web-330/">Return</a>
+        </div>
+        <!--Card that will show results for calories based on user input.-->
+        <div class="assign-container">
+
+            <div class="assign-content">
+                <div class="card">
+                    <div class="card-title">Calculations as of <span id= "today"></span></div> <!-- ADD FUNCTIONS FOR CURRENT DATE?-->
+                        <div id="assign-results-header" style="padding: 20px;"></div>
+                        <div class="card-content assign-results-text" id="futureValue" style="text-align: center;">
+                            
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!--JavaScript file for toggle-button-->
+        <script src= "toggle-button.js"></script>
+
+        <!--JavaScript-->
+        <script type="module">
+
+        import { FinanceCalculator } from "./finance-calculator.js";
+
+        import { Validator } from "./validator.js";
+
+        document.getElementById("today").innerHTML = new Date().toLocaleDateString("en-US");
+
+        document.getElementById("btnCalculate").onclick = function(){
+            let monthlyPayment = document.getElementById('txtMonthlyPayment').value;
+                //let txtMonthlyPayment = txtMonthlyPayment.options[txtMonthlyPayment.selectedIndex].value; 
+            
+            let rate = document.getElementById('txtYearlyRate').value;
+                //let txtYearlyRate = txtYearlyRate.options[txtYearlyRate.selectedIndex].value; 
+
+            let listNumOfYears = document.getElementById('listNumOfYears');
+            let years = listNumOfYears.options[listNumOfYears.selectedIndex].value; 
+
+            let errorLogEl = document.getElementById('errorLog');
+
+            //Left off on page 9 # 5
+            
+            let monthlyPaymentValidator = new Validator("Monthly Payment", monthlyPayment);
+
+            monthlyPaymentValidator.addRequiredField();
+            monthlyPaymentValidator.addRequiredFloatField();
+            monthlyPaymentValidator.addFloatMinField(100);
+
+            let rateValidator = new Validator("Interest Rate", rate);
+
+            rateValidator.addRequiredField();
+            rateValidator.addRequiredFloatField();
+            rateValidator.addFloatMaxField(100);
+
+            let errorLog = [];
+
+            if (!monthlyPaymentValidator.validate()){
+                for (let msg of monthlyPaymentValidator.messages)
+                {
+                    errorLog.push(msg);
+                }
+            }
+
+            if (!rateValidator.validate()){
+                for (let msg of rateValidator.messages)
+                {
+                    errorLog.push(msg);
+                }
+            }
+            if (monthlyPaymentValidator.validate() && rateValidator.validate()){
+                errorLogEl.innerHTML = "";
+                let futureValue = FinanceCalculator.calculateFutureValue(parseFloat(monthlyPayment), parseFloat(rate), parseInt(years));
+                let formattedMoney = FinanceCalculator.convertToCurrency(futureValue);
+                document.getElementById("futureValue").innerHTML = "The future value is " + formattedMoney;
+            }
+            else {
+                errorLogEl.innerHTML = "";
+                let errorLogMessage = "<ul>";
+                for (const message of errorLog) {
+                    errorLogMessage += "<li>" + message + "</li>";
+                } 
+                errorLogMessage += "</ul>";
+                errorLogEl.innerHTML = errorLogMessage; 
+            }
+
+
+        }  
+
+    
+
+        </script>
+    </body>
+</html>
