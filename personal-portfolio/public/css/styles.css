@@ -1,0 +1,100 @@
+.navbar {
+    background-color:#d2c1c3;
+}
+
+.navbar li{
+    display: inline-block;
+    padding-right: 80px;
+    padding-left: 80px;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+}
+
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/personal-portfolio/public/images/background.jpg");
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .hero-text {
+    position: absolute;
+    color: white;
+    font-family: 'Dawning of a New Day', cursive;
+    margin-top: 15%;
+}
+
+h1{
+    font-size: 60px;
+    margin-left: 50px;
+}
+h2{
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    margin-top: -15px;
+    margin-left: 20px;
+}
+h3{
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    padding:10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#main{
+    padding:20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    line-height: 2;
+    column-count: 2;
+    column-gap: 20px;
+    
+}
+
+#about{
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    line-height: 2;
+    width: 100%;
+    padding:20px;
+
+}
+
+.container-fluid{
+    padding: 20px;
+}
+
+#landscape{
+    width: 100%;
+
+}
+
+#portrait{
+    width: 100%;
+
+}
+
+
+#icons {
+    display: inline-block;
+    width: 24%;
+    font-family: 'Playfair Display', serif;
+    font-size: 8px;
+    text-align: center;
+}
+
+#quick-links {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+#footer{
+    background-color:#d2c1c3;
+}
