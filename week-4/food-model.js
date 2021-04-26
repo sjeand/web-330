@@ -2,7 +2,7 @@
 =======================================================
   Title: product.js
   Author: Professor Krasso
-  Date: 04/02/2021
+  Date: 04/20/2021
   Modified by: Sarah Jean Baptiste
   Description: Products
 ========================================================
