@@ -8,14 +8,13 @@
 ========================================================
 */
 
+// Import classes for designated files. 
 import { RequiredField } from "./required-field.js" 
-
 import { FloatField } from "./float-field.js"
-
 import { FloatMinField } from "./float-min-field.js"
-
 import { FloatMaxField } from "./float-max-field.js"
 
+// Export class,  create classes for validators and messages, assign empty arrays, and create a constructor.
 export class Validator{
     validators = [];
     messages = [];
@@ -23,6 +22,8 @@ export class Validator{
         this.name = name;
         this.field = field; 
     }
+    
+    // Get name and field for each class.
     addRequiredField(){
         this.validators.push(new RequiredField(this.name, this.field));
     }
@@ -39,6 +40,7 @@ export class Validator{
         this.validators.push(new FloatMaxField(this.name, this.field, max));
     }
     
+    // Function to validate and get message.
     validate(){
         for (const validator of this.validators) { 
             if (!validator.validate()){
@@ -46,7 +48,7 @@ export class Validator{
             }
             
         }
-        return this.messages.length == 0;
+        return this.messages.length == 0; 
     }
 }
 

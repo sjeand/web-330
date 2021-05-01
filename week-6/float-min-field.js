@@ -8,7 +8,7 @@
 ========================================================
 */
 
-// Export class.
+// Export class and create constructor for name, field, and min.
 export class FloatMinField {
     constructor(name, field, min){
         this.name = name;
@@ -20,6 +20,7 @@ export class FloatMinField {
         return (value > this.min);
     }
     
+    // Message to be displayed when there is an error.
     getMessage(){
     return this.name + " must be more than " + this.min + ". You entered " + this.field
     }

@@ -21,6 +21,7 @@ export class FloatMaxField {
     return (value < this.max);
   }
 
+  // Message to be displayed when there is an error.
   getMessage() {
     return this.name + " must be less than " + this.max + ". You entered " + this.field; 
   }

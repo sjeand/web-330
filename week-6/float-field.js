@@ -19,6 +19,7 @@ export class FloatField {
         return !isNaN(result);
     }
     
+    // message to be displayed when there is an error. 
     getMessage(){
         return this.name + " must be a float value. You entered " + this.field; 
     }

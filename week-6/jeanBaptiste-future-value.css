@@ -1,3 +1,13 @@
+/**
+=================================================
+Title: jeanBaptiste-future-value.css
+Author: Sarah Jean Baptiste
+Date: 04/20/2021
+Description: Styling for future value app
+==================================================
+ */
+
+/* Styling for danger */
 .danger{
     float: left;
     color: #df546a;
@@ -5,11 +15,13 @@
     letter-spacing: 2px;
 }
 
+/* Styling for form-label */
 .form-label{
     display: inline-block;
     padding-top: 1rem;
 }
 
+/* Styling for button to override other css */
 .btn.full-width{
     width:100%;
 }

@@ -1,10 +1,10 @@
 <!--
 ==========================================
-  Title: Assignment 4.2
+  Title: Assignment 6.2
   Author: Professor Krasso
-  Date: 04/04/2021
+  Date: 04/20/2021
   Modified by: Sarah Jean Baptiste
-  Description: Calorie App
+  Description: Future Value
 ==========================================
 -->
 
@@ -39,10 +39,10 @@
         <!-- Toggle icon to allow users to switch from light to dark mode.-->
         <i onclick="toggleMode(this)" id="icon-mode" class="fa fa-toggle-off pull-right" style="font-size: 18px; margin-right: 100px;"><span id="icon-text"></span></i>
 
-            <!--Heading one Welcome to the Calorie App!-->
+            <!--Heading one Welcome to the Future App!-->
             <h1 class="app-header">Welcome to the Future App!</h1>
 
-            <!--Card to display calorie search form with text field and button to initiate search.-->
+            <!--Card to display future value with inputs for payments, interest and years.-->
             <div class="assign-content">
                 <div class ="card container">
                     <div class="card-title row">
@@ -53,24 +53,28 @@
                     </div>
                     <div class="card-content">
                         <div class="form">
+                            <!-- Monthly payment input field.-->
                             <div class="row">
                                 <div class="col-5"><label class = "form-label" for="txtMonthlyPayment">Monthly Payment:</label></div>
-                                <div class="col-7"><input type="text" class="input" id="txtMonthlyPayment" name="foodItem"></div>
+                                <div class="col-7"><input type="text" class="input" id="txtMonthlyPayment" name="monthlyPayment"></div>
                             </div>
+                            <!-- Interest rate input field.-->
                             <div class= "row">
                                 <div class="col-5"><label class = "form-label" for="txtYearlyRate">Interest Rate:</label></div>
-                                <div class="col-7"><input type="text" class="input" id="txtYearlyRate" name="foodItem"></div>
+                                <div class="col-7"><input type="text" class="input" id="txtYearlyRate" name="yearlyRate"></div>
                             </div>
+                            <!-- Message to display example for interest rate for users.-->
                             <div class="row">
                                 <div class="col-5"></div>
                                 <div class="col-7"><i class="danger">Enter 11% as 11.1:</i></div>
                             </div>
+                            <!-- Drop down to select year 1-10.-->
                             <div class="row">
                                 <div class="col-5"><label class = "form-label" for="listNumOfYears">Number of Years:</label></div>
                                 <div class="col-7"><select name="products" id="listNumOfYears" class="drop-down-menu">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
-                                    <option value="3">3</option> <!--PAGE 8 #3-6!!!!-->
+                                    <option value="3">3</option> 
                                     <option value="4">4</option>
                                     <option value="5">5</option>
                                     <option value="6">6</option>
@@ -81,7 +85,7 @@
                                 </select></div>
                             </div>
                             
-                            <!--Button to search for food model data based on user input.-->
+                            <!--Button to calculate future value.-->
                             <div class="row">
                                 <div class= "col-1"></div>
                                 <div class= "col-6"><button type="button" class="btn btn-primary full-width" id="btnCalculate">Calculate</button></div>
@@ -96,17 +100,14 @@
         <div class="assign-content">
             <a class="return-home" href="https://sjeand.github.io/web-330/">Return</a>
         </div>
-        <!--Card that will show results for calories based on user input.-->
+        <!--Card that will show results for the future value.-->
         <div class="assign-container">
-
             <div class="assign-content">
                 <div class="card">
-                    <div class="card-title">Calculations as of <span id= "today"></span></div> <!-- ADD FUNCTIONS FOR CURRENT DATE?-->
+                    <div class="card-title">Calculations as of <span id= "today"></span></div> <!-- Title will update to todays date.-->
                         <div id="assign-results-header" style="padding: 20px;"></div>
-                        <div class="card-content assign-results-text" id="futureValue" style="text-align: center;">
-                            
-                        </div>
-                    
+                        <div class="card-content assign-results-text" id="futureValue" style="text-align: center;">      
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,25 +118,23 @@
         <!--JavaScript-->
         <script type="module">
 
+        // Import classes from designated files.
         import { FinanceCalculator } from "./finance-calculator.js";
-
         import { Validator } from "./validator.js";
 
+        // Today element to change to current date.
         document.getElementById("today").innerHTML = new Date().toLocaleDateString("en-US");
 
+        // Onclick function for calculate button. 
         document.getElementById("btnCalculate").onclick = function(){
-            let monthlyPayment = document.getElementById('txtMonthlyPayment').value;
-                //let txtMonthlyPayment = txtMonthlyPayment.options[txtMonthlyPayment.selectedIndex].value; 
+            let monthlyPayment = document.getElementById('txtMonthlyPayment').value;    
             
             let rate = document.getElementById('txtYearlyRate').value;
-                //let txtYearlyRate = txtYearlyRate.options[txtYearlyRate.selectedIndex].value; 
-
+            
             let listNumOfYears = document.getElementById('listNumOfYears');
             let years = listNumOfYears.options[listNumOfYears.selectedIndex].value; 
 
             let errorLogEl = document.getElementById('errorLog');
-
-            //Left off on page 9 # 5
             
             let monthlyPaymentValidator = new Validator("Monthly Payment", monthlyPayment);
 
@@ -151,13 +150,13 @@
 
             let errorLog = [];
 
+            // error messages to be displayed in first card.
             if (!monthlyPaymentValidator.validate()){
                 for (let msg of monthlyPaymentValidator.messages)
                 {
                     errorLog.push(msg);
                 }
             }
-
             if (!rateValidator.validate()){
                 for (let msg of rateValidator.messages)
                 {
