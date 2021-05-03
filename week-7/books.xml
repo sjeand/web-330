@@ -1,0 +1,45 @@
+<bookList>
+    <book>
+        <isbn>9780345339683</isbn>
+        <title>The Hobbit or There and Back Again</title>
+        <description>N/A</description>
+        <pages>287</pages>
+        <author>J.R.R. Tolkien</author>
+    </book>
+       <book>
+        <isbn>9780261103573</isbn>
+        <title>The Fellowship of the Ring</title>
+        <description>The First Part of Lord of the Rings</description>
+        <pages>416</pages>
+        <author>J.R.R. Tolkien</author>
+    </book>
+       <book>
+        <isbn>9780261102361</isbn>
+        <title>The Two Towers</title>
+        <description>The Second Part of Lord of the Rings</description>
+        <pages>442</pages>
+        <author>J.R.R. Tolkien</author>
+    </book>
+       <book>
+        <isbn>9780261102361</isbn>
+        <title>The Return of the King</title>
+        <description>The Third Part of Lord of the Rings</description>
+        <pages>556</pages>
+        <author>J.R.R. Tolkien</author>
+    </book>
+       <book>
+        <isbn>978059399322</isbn>
+        <title>Dune: Deluve Edition</title>
+        <description>N/A</description>
+        <pages>688</pages>
+        <author>Frank Herbert</author>
+    </book>
+       <book>
+        <isbn>9780316769532</isbn>
+        <title>The Catcher and the Rye</title>
+        <description>N/A</description>
+        <pages>277</pages>
+        <author>J.D. Salinger</author>
+    </book>
+    
+</bookList>

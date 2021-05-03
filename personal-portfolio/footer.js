@@ -16,53 +16,54 @@ class Footer extends HTMLElement
 
     connectedCallback() {
         this.innerHTML = `
-            <div id="footer">
+            
+  <div id="footer">
            
-                <!-- Grid container -->
-                <div class="container p-4">
-                        
-                    <section class="mb-4">
-                        <p id="quick-links">Quick Links:</p>
-                    </section>
+  <!-- Grid container -->
+  <div class="container p-4">
+          
+      <section class="mb-4">
+          <p id="quick-links">Quick Links:</p>
+      </section>
 
-                    <!-- Section: Social media -->
-                    <section>
-                        <!-- Facebook -->
-                        <div id= "icons">
-                            <a class="btn btn-outline-dark btn-floating" href="#!" role="button">
-                                <i class="bi bi-github"></i>    
-                            </a>
-                            <p style="font-size: 10px; margin-top: 10px;">My Repository</p>
-                        </div>
+      <!-- Section: Social media -->
+      <section>
+          <!-- Facebook -->
+          <div id= "icons">
+              <a class="btn btn-outline-dark btn-floating" href="https://github.com/sjeand/web-330" role="button">
+                  <i class="bi bi-github"></i>    
+              </a>
+              <p style="font-size: 10px; margin-top: 10px;">My Repository</p>
+          </div>
 
-                        <div id= "icons">
-                            <a class="btn btn-outline-dark btn-floating" href="#!" role="button">
-                                <i class="bi bi-github"></i>
-                            </a>
-                            <p style="font-size: 10px; margin-top: 10px;">Web-330 Repository</p>
-                        </div>  
+          <div id= "icons">
+              <a class="btn btn-outline-dark btn-floating" href="https://github.com/buwebdev/web-330" role="button">
+                  <i class="bi bi-github"></i>
+              </a>
+              <p style="font-size: 10px; margin-top: 10px;">Web-330 Repository</p>
+          </div>  
 
-                        <div id= "icons">
-                            <a class="btn btn-outline-dark btn-floating" href="#!" role="button">
-                                <i class="bi bi-plus-square"></i>
-                            </a>
-                            <p style="font-size: 10px; margin-top: 10px;">Bellevue Web Development</p>
-                        </div>
+          <div id= "icons">
+              <a class="btn btn-outline-dark btn-floating" href="https://www.bellevue.edu/degrees/bachelor/web-development-bs/" role="button">
+                  <i class="bi bi-plus-square"></i>
+              </a>
+              <p style="font-size: 10px; margin-top: 10px;">Bellevue Web Development</p>
+          </div>
 
-                        <div id= "icons">
-                            <a class="btn btn-outline-dark btn-floating" href="#!" role="button">
-                                <i class="bi bi-youtube"></i>
-                            </a>
-                            <p style="font-size: 10px; margin-top: 10px;">Web-330 YouTube Channel</p>
-                        </div>
+          <div id= "icons">
+              <a class="btn btn-outline-dark btn-floating" href="#!" role="button">
+                  <i class="bi bi-youtube"></i>
+              </a>
+              <p style="font-size: 10px; margin-top: 10px;">Web-330 YouTube Channel</p>
+          </div>
 
-                    </section>
-                </div>
+      </section>
+  </div>
 
-                
-                <!-- Copyright -->
-                <hr>
-                <div class="text-center p-3" style= "font-family: 'Playfair Display', serif;">© 2021 Sarah Jean Baptiste</div>
+  
+  <!-- Copyright -->
+  <hr>
+  <div class="text-center p-3" style= "font-family: 'Playfair Display', serif;">© 2021 Sarah Jean Baptiste</div>
 
         `;
     }

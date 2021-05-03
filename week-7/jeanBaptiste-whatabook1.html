@@ -1,0 +1,154 @@
+<!--
+==========================================
+  Title: Assignment 7.3
+  Author: Professor Krasso
+  Date: 04/30/2021
+  Modified by: Sarah Jean Baptiste
+  Description: WhatABook App
+==========================================
+-->
+
+<!DOCTYPE html> 
+<html lang="en">
+
+    <!--Document header starts here.-->
+    <head> 
+        <title>WEB 330 - Enterprise JavaScript II</title> 
+
+        <!-- CSS stylesheets-->
+        <link href="../site.css" rel="stylesheet" type="text/css"> 
+        <link href="../theme.css" rel="stylesheet" type="text/css">
+        
+        <!-- CDN stylesheets-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    </head> 
+
+    <!--Document Body Starts here.-->
+    <body class="light-theme">
+        <div class="assign-container">
+
+        <!-- Toggle icon to allow users to switch from light to dark mode.-->
+        <i onclick="toggleMode(this)" id="icon-mode" class="fa fa-toggle-off pull-right" style="font-size: 18px; margin-right: 100px;"><span id="icon-text"></span></i>
+        
+        <!-- Page Heading-->
+        <h1 class="app-header" style="background-color: white; color: black; border: none;">Welcome to the WhatABook, Part 1 App!</h1>
+
+            <div class="assign-content">
+                <div class ="card">
+                    <!--Book Listing Table to display ISBN, Title, Description, pages, & authors-->
+                    <div class="card-title">Book Listing</div>
+                    <div class="card-content" id="bookList">
+                        <table>
+                            <thead></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Return link to landing page-->
+        <div class="assign-content">
+            <a class="return-home" href="https://sjeand.github.io/web-330/">Return</a>
+        </div>
+        
+        <div class="assign-container">
+            <!--Card that will show selected books information.-->
+            <div class="assign-content">
+                <div class="card">
+                    <div class="card-title">Selected Books</div>
+                        <div class= "card-content" id="selectedBook"></div> 
+                </div>
+            </div>
+        </div>
+    
+    <!--JavaScript file for theme.js-->  
+    <script src="../theme.js"></script>
+
+    <!--JavaScript file for toggle-button-->
+    <script src= "toggle-button.js"></script>
+
+    <script>   
+        // Theme function
+        setSelectedTheme();
+
+        //Event listener for DOMContentLoaded.
+        window.addEventListener('DOMContentLoaded',() => {
+        
+            // Get books.xml file
+            let fileName = "books.xml";
+
+            fetch(fileName)
+            .then(res => res.text())
+            .then(data => {
+                let domParser = new DOMParser();
+                let xmlBooks = domParser.parseFromString(data, "text/xml");
+
+                loadBooks(xmlBooks);
+                addIsbnClickEvents();
+            })
+        });    
+
+        // Call loadBooks function and fill out table
+        function loadBooks(xml) {
+            let books = xml.getElementsByTagName("book");
+
+            let tableData = `<table id="bookTable" class="table"><tr><th>ISBN</th><th>Title</th><th>Description</th><th>Pages</th><th>Authors</th></tr>`
+            
+            // Append each XML object to the table.
+            for (let book of books) 
+            {
+                let isbn = book.getElementsByTagName("isbn")[0].childNodes[0].nodeValue;
+                let title = book.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+                let description = book.getElementsByTagName("description")[0].childNodes[0].nodeValue;
+                let pages = book.getElementsByTagName("pages")[0].childNodes[0].nodeValue;
+                let authors = book.getElementsByTagName("author")[0].childNodes[0].nodeValue;
+
+                tableData += `<tr><td data-value="ISBN"><a href="#" class="isbn-link">${isbn}</a></td><td data-value="Title">${title}</td><td data-value="Description">${description}</td><td data-value="Pages">${pages}</td><td data-value="Authors">${authors}</td></tr>`
+
+            }
+            tableData += "</table>";
+            document.getElementById("bookList").innerHTML = tableData;
+            
+        }
+
+        // function anchorClicked to created unordered list string and append the objects.
+        function anchorClicked(e) {
+            e.preventDefault();
+
+            let self = this;
+            let cell = self.parentElement;
+            let row = cell.parentElement;
+
+            let data = row.querySelectorAll("td");
+
+            let bookData = "<ul style='list-style-type: none; text-align: left;'>"
+
+            for (let field of data)
+            {
+                bookData += `<li><b>${field.dataset.value}</b>: ${field.textContent}</li>`;
+            }
+
+            bookData += "</ul>";
+
+            document.getElementById("selectedBook").innerHTML = bookData;
+
+        }
+
+        // addIsbnClickEvents function to  display results when ISBN is clicked on.
+        function addIsbnClickEvents() {
+            let viewButtons = document.querySelectorAll("#bookTable tbody .isbn-link");
+
+            for (let index = 0; index < viewButtons.length; index++)
+            {
+                let viewButton = viewButtons[index];
+                viewButtons[index].addEventListener("click", anchorClicked);
+            }
+
+        }
+
+    </script>
+    </body>
+</html>

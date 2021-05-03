@@ -1,4 +1,4 @@
-  
+ 
 class Header extends HTMLElement
 {
     constructor() {
@@ -8,34 +8,34 @@ class Header extends HTMLElement
     connectedCallback() {
         this.innerHTML = `
          
-    <!--Navigation bar for home, contact, story, employees and shop.-->   
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light">
+        <nav class="navbar navbar-expand-lg sticky-top navbar-light">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active" style= "font-weight: 600;">
-                    <a href="#" class="nav-link">Home</a>
+                <li class="nav-item" style= "font-weight: 600;">
+                    <a href="index.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item" style= "font-weight: 600;">
-                    <a href="#" class="nav-link">About</a>
+                    <a href="about.html" class="nav-link">About</a>
                 </li>
                 <li class="nav-item" style= "font-weight: 600;">
-                    <a href="#" class="nav-link">Resume</a>
+                    <a href="resume.html" class="nav-link">Resume</a>
                 </li>
                 <li class="nav-item" style= "font-weight: 600;">
-                    <a href="#" class="nav-link">Projects</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
                 </li>
                 <li class="nav-item" style= "font-weight: 600;">
-                    <a href="#" class="nav-link">Database Diagrams</a>
+                    <a href="database-diagram.html" class="nav-link">Database Diagrams</a>
                 </li>
                 <li class="nav-item" style= "font-weight: 600;">
-                    <a href="#" class="nav-link">API Unit Testing</a>
+                    <a href="api-unit.html" class="nav-link">API Unit Testing</a>
                 </li>
                 <li class="nav-item" style= "font-weight: 600;">
-                    <a href="#" class="nav-link">Bucket List</a>
+                    <a href="bucketList.html" class="nav-link">Bucket List</a>
                 </li>
             </ul>
         </div>
     </nav>
+
 
     <div class= "hero-image"> 
         <div class= "hero-text">
@@ -46,5 +46,6 @@ class Header extends HTMLElement
         `;
     }
 }
+
 
 customElements.define("header-component", Header);

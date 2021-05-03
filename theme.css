@@ -29,7 +29,7 @@ body.light-theme {
     --input-border-color: #ccc;
     --table-header-background-color: #4F3674;
     --table-header-color: #fff;
-    --table-border-color: #ddd;
+    --table-border-color: solid 1px lightgray;
     --table-hover-background-color: #D6A800;
     --table-hover-color: #4F3674;
 
@@ -179,14 +179,14 @@ h2, h3, h4 {
 }
 
 /*Table styling*/
-.table{
+table{
     border-collapse: collapse;
     text-align: left;
     margin-bottom: 30px;
 }
 
 /*Table header styling*/
-.table th{
+th{
     border: 1px solid #ddd;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -197,14 +197,14 @@ h2, h3, h4 {
 }
 
 /*Table row styling*/
-.table td, th{
+td{
     padding: 6px;
     border: var(--table-border-color);
 
 }
 
 /*Table row  hover styling*/
-.table tr:hover{ 
+table tr:hover{ 
     background-color: var(--table-hover-background-color);
     color:var(--table-hover-color);
     cursor: pointer;
