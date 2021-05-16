@@ -1,56 +1,73 @@
+<!--
+==========================================
+  Title: About Page
+  Author: Sarah Jean Baptiste
+  Date: 05/07/2021
+  Description: About page on personal portfolio
+==========================================
+-->
+
 <!doctype html>
-
 <html lang="en-us">
-
+    
+<!--Document head starts here-->
 <head>
 
+    <meta charset="UTF-8">
     <title>Sarah Jean Baptiste</title>
 
+    <!--Include stylesheet and icons for bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   
-    <link rel="stylesheet" href="css/styles.css" type="text/css">     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"> 
 
+    <!--Include local CSS-->
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+
+    <!--Include Google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
-
+    <!--Include scripts-->
     <script src="header.js"></script>
     <script src="footer.js"></script>
 
 </head>
 
+<!--Document body starts here-->
 <body>
    
-<div>
-
-  <header-component></header-component>
-  
   <div>
-    <h3>About</h3>
-    <hr>
-
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <p id="about">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tempor commodo ullamcorper a. Mauris ultrices eros in cursus turpis massa tincidunt. Feugiat in ante metus dictum at tempor. Ac turpis egestas integer eget. Turpis cursus in hac habitasse. Consectetur libero id faucibus nisl tincidunt eget nullam non nisi. Lobortis mattis aliquam faucibus purus in massa tempor nec. Dapibus ultrices in iaculis nunc sed augue lacus viverra vitae. Ut eu sem integer vitae justo eget magna. Molestie at elementum eu facilisis sed odio morbi quis. Tellus orci ac auctor augue mauris augue neque gravida. Facilisis sed odio morbi quis commodo odio aenean. Augue interdum velit euismod in pellentesque massa placerat duis ultricies. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Dui faucibus in ornare quam. Hac habitasse platea dictumst vestibulum. Ac turpis egestas sed tempus. Egestas dui id ornare arcu odio ut. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse sed.
-          </p>
-        </div>
-        <div class="col">
-          <img id="landscape" src="images/familyPhoto.jpg" alt="Family" class="rounded">
-        </div>
-        <div class="col">
-          <img id="portrait" src="images/familyPhoto2.jpg" alt="Family" class="rounded">
+    <!--Include Starter-->
+    <header-component></header-component>
+    
+    <!--Div to hold all content-->
+    <div>
+      <h3>About Me</h3>
+      <hr> <!--Horizontal line-->
+      <!--Div to hold 3 columns-->
+      <div class="container-fluid">
+        <div class="row">
+          <!--First column to hold paragraph-->
+          <div class="col">
+            <p id="about">
+              Hello! My name is Sarah Jean Baptiste. I am a web-development student at Bellevue University.  When the COVID pandemic started I decided it was time to finally finish my bachelor degree. When I get my degree I would love to be a remote front-end engineer. I love learning new languages and programs but my true love is front-end. I wanted to choose a degree where I could still make a living but one where I can also express myself and show off my artistic abilities. I want to work remote, because my best job in life is being a wife and a mother. My husband and I have been married for six years and have a beautiful and spunky three year old. We love relaxing, hanging out at home, and just being together. While we are usually home-bodies, we love nothing more than traveling and showing our daughter the world. 
+            </p>
+          </div>
+          <!--Second column to family photo one-->
+          <div class="col">
+            <img id="family-photo" src="images/familyPhoto.jpg" alt="Family photo with turtles" class="rounded">
+          </div>
+          <!--Third column to family photo two-->
+          <div class="col">
+            <img id="family-photo" src="images/familyPhoto2.jpg" alt="Family photo at Old Faithful" class="rounded">
+          </div>
         </div>
       </div>
-    </div>
   </div>
 
-
+  <!--Include Footer-->
   <footer-component></footer-component>
 
 </body>

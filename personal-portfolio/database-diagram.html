@@ -1,124 +1,120 @@
 <!--
 ==========================================
-  Title: Assignment 5.3
+  Title: database-diagram.html
   Author: Sarah Jean Baptiste
   Date: 04/15/2021
-  Description: Personal Portfolio
+  Description: Database Diagram page
 ==========================================
 -->
 
-<!DOCTYPE html> 
-<html lang="en">
-
-<!--Document header starts here.-->
-
+<!doctype html>
+<html lang="en-us">
+    
+<!--Include stylesheet and icons for bootstrap-->
 <head>
 
-  <meta charset="UTF-8">
-  <title>Sarah Jean Baptiste</title>
+    <meta charset="UTF-8">
+    <title>Sarah Jean Baptiste</title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- 
-  <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <!--Include stylesheet and icons for bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"> 
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <!--Include local CSS-->
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <!--Include Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
-  <script src="header.js"></script>
-  <script src="footer.js"></script>
+    <!--Include scripts-->
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
 
 </head>
 
 <!--Document Body Starts here.-->
 <body>
-  
+  <!--Include header.-->
   <header-component></header-component>
-  
-  <div class="assign-container">
-    <h3 class="app-header">Database Diagrams</h3>
-    <hr/>
-    <div class="assign-content">
-        <div class="card">
+    <!--Div for all content.-->
+    <div class="assign-container">
+        <h3 class="app-header">Database Diagrams</h3>
+        <hr/> <!--Horizontal line.-->
+        <!--Card to contain all three cards in the three columns.-->
+        <div class="assign-content">
+            <div class="card">
+                <!--Left column with three cards.-->
+                <div class="card-content row" id="projects-container">
+                    <div class="card col-sm-4 ">
+                        <div class="card-title">
+                            <h4>ec sagittis aliquam malesuada bibendum</h4>
+                        </div>
+                        <div class="card-content"></div>
+                    </div>
+    
+                    <div class="card col-sm-4 ">
+                        <div class="card-title">
+                            <h4>Nec sagittis aliquam malesuada bibendum</h4>
+                        </div>
+                        <div class="card-content"></div>
+                    </div>
+                    <div class="card col-sm-4">
+                        <div class="card-title">
+                            <h4>Nec sagittis aliquam malesuada bibendum</h4>
+                        </div>
+                        <div class="card-content "></div>
+                    </div>   
+                </div>
+            </div>
+            <!--Middle column with three cards.-->
             <div class="card-content row" id="projects-container">
                 <div class="card col-sm-4 ">
                     <div class="card-title">
                         <h4>ec sagittis aliquam malesuada bibendum</h4>
                     </div>
-                    <div class="card-content">
-                    </div>
+                    <div class="card-content"></div>
                 </div>
-
+    
                 <div class="card col-sm-4 ">
                     <div class="card-title">
                         <h4>Nec sagittis aliquam malesuada bibendum</h4>
                     </div>
-                    <div class="card-content">
-                    </div>
+                    <div class="card-content"></div>
                 </div>
                 <div class="card col-sm-4">
                     <div class="card-title">
                         <h4>Nec sagittis aliquam malesuada bibendum</h4>
                     </div>
-                    <div class="card-content ">
+                    <div class="card-content "></div>
+                </div>   
+            </div>
+            <!--Right column with three cards.-->
+            <div class="card-content row" id="projects-container">
+                <div class="card col-sm-4 ">
+                    <div class="card-title">
+                        <h4>ec sagittis aliquam malesuada bibendum</h4>
                     </div>
+                    <div class="card-content"></div>
+                </div>
+                <div class="card col-sm-4 ">
+                    <div class="card-title">
+                        <h4>Nec sagittis aliquam malesuada bibendum</h4>
+                    </div>
+                    <div class="card-content"></div>
+                </div>
+                <div class="card col-sm-4">
+                    <div class="card-title">
+                        <h4>Nec sagittis aliquam malesuada bibendum</h4>
+                    </div>
+                    <div class="card-content "></div>
                 </div>   
             </div>
         </div>
-        <div class="card-content row" id="projects-container">
-            <div class="card col-sm-4 ">
-                <div class="card-title">
-                    <h4>ec sagittis aliquam malesuada bibendum</h4>
-                </div>
-                <div class="card-content">
-                </div>
-            </div>
-
-            <div class="card col-sm-4 ">
-                <div class="card-title">
-                    <h4>Nec sagittis aliquam malesuada bibendum</h4>
-                </div>
-                <div class="card-content">
-                </div>
-            </div>
-            <div class="card col-sm-4">
-                <div class="card-title">
-                    <h4>Nec sagittis aliquam malesuada bibendum</h4>
-                </div>
-                <div class="card-content ">
-                </div>
-            </div>   
-        </div>
-        <div class="card-content row" id="projects-container">
-            <div class="card col-sm-4 ">
-                <div class="card-title">
-                    <h4>ec sagittis aliquam malesuada bibendum</h4>
-                </div>
-                <div class="card-content">
-                </div>
-            </div>
-
-            <div class="card col-sm-4 ">
-                <div class="card-title">
-                    <h4>Nec sagittis aliquam malesuada bibendum</h4>
-                </div>
-                <div class="card-content">
-                </div>
-            </div>
-            <div class="card col-sm-4">
-                <div class="card-title">
-                    <h4>Nec sagittis aliquam malesuada bibendum</h4>
-                </div>
-                <div class="card-content ">
-                </div>
-            </div>   
-        </div>
     </div>
-</div>
-
+<!--Include footer.-->
 <footer-component></footer-component>
 </body>
 </html>

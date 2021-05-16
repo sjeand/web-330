@@ -1,5 +1,6 @@
 .navbar {
     background-color:#d2c1c3;
+    width: 100%;
 }
 
 .navbar li{
@@ -73,8 +74,7 @@ h5{
     font-style: italic;
     line-height: 2;
     column-count: 2;
-    column-gap: 20px;
-    
+    column-gap: 40px;
 }
 
 #about{
@@ -82,7 +82,10 @@ h5{
     font-style: italic;
     line-height: 2;
     width: 100%;
-    padding:20px;
+    padding: 20px;
+    background: #ae757b;
+    padding: 30px 40px 186px 40px;
+    border-radius: 5px;
 
 }
 
@@ -151,23 +154,32 @@ h5{
     padding: 20px;
 }
 
-#landscape{
+#family-photo{
     width: 100%;
-
 }
-
-#portrait{
-    width: 100%;
-
-}
-
 
 #icons {
     display: inline-block;
     width: 24%;
     font-family: 'Playfair Display', serif;
-    font-size: 8px;
     text-align: center;
+}
+
+#download {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    padding: 4px;
+    float: right; 
+    margin-right: 40px;
+}
+
+#download-icon {
+    padding: 4px;
+}
+
+#hyperlink {
+    padding: 6px;
+    color: black;
 }
 
 #quick-links {
@@ -177,3 +189,4 @@ h5{
 #footer{
     background-color:#d2c1c3;
 }
+

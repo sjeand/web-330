@@ -7,26 +7,29 @@
 ==========================================
 -->
 
-<!DOCTYPE html> 
-<html lang="en">
-
-<!--Document header starts here.-->
+<!doctype html>
+<html lang="en-us">
+    
+<!--Include stylesheet and icons for bootstrap-->
 <head>
 
     <meta charset="UTF-8">
     <title>Sarah Jean Baptiste</title>
 
+    <!--Include stylesheet and icons for bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"> 
+
+    <!--Include local CSS-->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-     
+
+    <!--Include Google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
-
+    <!--Include scripts-->
     <script src="header.js"></script>
     <script src="footer.js"></script>
 
@@ -34,69 +37,79 @@
 
 <!--Document Body Starts here.-->
 <body>
-
+    <!--Include Header.-->
     <header-component></header-component>
-
+    <!--Div to contain all content.-->
     <div class="assign-container">
         <h3 class="app-header">My Resume</h3>
-        <hr/>
+        <hr/> <!--Horizontal line.-->
         <div class="row">
+            <!--left column for info and skills.-->
             <div class="assign-content col-sm-3 vl">
                     <div>
+                        <!--Info section.-->
                         <h4>Info</h4>
                             <div>
-                                    <h5>Sarah Jean Baptiste</h5>
-                                    <h5>Front-End Developer - Student</h5>
-                                    <h5>1234 Boulevard Ave.</h5>
-                                    <h5>sjbaptiste@my365.bellevue.edu</h5>
+                                <h5>Sarah Jean Baptiste</h5>
+                                <h5>Front-End Developer - Student</h5>
+                                <h5>1234 Boulevard Ave.</h5>
+                                <h5>sjbaptiste@my365.bellevue.edu</h5>
                             </div>
+                        <!--Skills section.-->
                         <h4>Skills</h4>
                             <div id="list">
                                 <ul>
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                    <li>Programing Languages: HTML, CSS & JavaScript</li>
+                                    <li>Adobe software suite</li>
+                                    <li>User interface design</li>
+                                    <li>Creative</li>
+                                    <li>Problem-solving</li>
+                                    <li>Willingness to learn</li>
+                                    <li>Leadership</li>
                                 </ul>
                             </div>
                     </div>
             </div>
+            <!--Right side column for profile, education and work history.-->
             <div class="assign-content col-sm-9">
                 <div>
+                    <!--Download PDF button and link.-->
+                    <a href=resume.pdf  target = "_blank">
+                        <button id = "download"><i id = "download-icon" class="bi bi-download"></i>Download Resume Here</button>
+                    </a> 
+                    <!--Profile section.-->
                     <h4>Profile</h4>
                         <p id="profile">
-                        Ac turpis egestas integer eget. Turpis cursus in hac habitasse. Consectetur libero id faucibus nisl tincidunt eget nullam non nisi. Lobortis mattis aliquam faucibus purus in massa tempor nec. Dapibus ultrices in iaculis nunc sed augue lacus viverra vitae. Ut eu sem integer vitae justo eget magna. Molestie at elementum eu facilisis sed odio morbi quis. Tellus orci ac auctor augue mauris augue neque gravida. Facilisis sed odio morbi quis commodo odio aenean. Augue interdum velit euismod in pellentesque massa placerat duis ultricies. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Dui faucibus in ornare quam. Hac habitasse platea dictumst vestibulum. Ac turpis egestas sed tempus. Egestas dui id ornare arcu odio ut. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse sed.
+                            Currently a student at Bellevue University, obtaining my bachelor degree in Web Development. Creative web-developer dedicated to creating beautiful and functional websites. Knowledgeable in user interface, testing and debugging techniques. Loves working with in teams, bouncing ideas off of others and problem solving. Learning a variety of languages and programs, including: HTML, CSS, JavaScripts, Node, Heroku, and Adobe.  
                         </p>    
                 </div>
                 <div>
+                    <!--Education section.-->
                     <h4>Education</h4>
                         <div id="list">
                             <ul>
-                                <li>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                                <li>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                                <li>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                                <li>Associate in Science</li>
+                                <li>Associate in Fine Arts</li>
+                                <li>Bachelor in Web Development (October of 2021)</li>
                             </ul>
                         </div>
                 </div>
                 <div>
+                    <!--Work History section.-->
                     <h4>Work History</h4>
                         <div id="list">
                             <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque adipiscing.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque adipiscing.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque adipiscing.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis molestie a iaculis at erat pellentesque adipiscing.</li>
+                                <li>2018-2021 Little Bo People's Place. Owner.</li>
+                                <li>2016-2018 Maurice's. Manager.</li>
+                                <li>2015-2016 David's Bridal. Sales Associate.</li>
                             </ul>
                         </div>
                 </div>
-
             </div>
         </div>
 
     </div>
-    
+    <!--Include footer.-->
     <footer-component></footer-component>    
-
 </body>
 </html>

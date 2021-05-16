@@ -30,31 +30,31 @@ class Footer extends HTMLElement
       <section>
           <!-- Facebook -->
           <div id= "icons">
-              <a class="btn btn-outline-dark btn-floating" href="https://github.com/sjeand/web-330" role="button">
+              <a class="btn btn-outline-dark btn-floating" href="https://github.com/sjeand" role="button" target="_blank">
                   <i class="bi bi-github"></i>    
               </a>
-              <p style="font-size: 10px; margin-top: 10px;">My Repository</p>
+              <p style="font-size: 12px; margin-top: 10px;">My Repository</p>
           </div>
 
           <div id= "icons">
-              <a class="btn btn-outline-dark btn-floating" href="https://github.com/buwebdev/web-330" role="button">
+              <a class="btn btn-outline-dark btn-floating" href="https://github.com/buwebdev/web-330" role="button" target="_blank">
                   <i class="bi bi-github"></i>
               </a>
-              <p style="font-size: 10px; margin-top: 10px;">Web-330 Repository</p>
+              <p style="font-size: 12px; margin-top: 10px;">Web-330 Repository</p>
           </div>  
 
           <div id= "icons">
-              <a class="btn btn-outline-dark btn-floating" href="https://www.bellevue.edu/degrees/bachelor/web-development-bs/" role="button">
+              <a class="btn btn-outline-dark btn-floating" href="https://www.bellevue.edu/degrees/bachelor/web-development-bs/" role="button" target="_blank">
                   <i class="bi bi-plus-square"></i>
               </a>
-              <p style="font-size: 10px; margin-top: 10px;">Bellevue Web Development</p>
+              <p style="font-size: 12px; margin-top: 10px;">Bellevue Web Development</p>
           </div>
 
           <div id= "icons">
-              <a class="btn btn-outline-dark btn-floating" href="#!" role="button">
+              <a class="btn btn-outline-dark btn-floating" href="#!" role="button" target="_blank">
                   <i class="bi bi-youtube"></i>
               </a>
-              <p style="font-size: 10px; margin-top: 10px;">Web-330 YouTube Channel</p>
+              <p style="font-size: 12px; margin-top: 10px;">Web-330 YouTube Channel</p>
           </div>
 
       </section>

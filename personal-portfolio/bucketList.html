@@ -6,38 +6,43 @@
   Description: Personal Portfolio
 ==========================================
 -->
+
 <!doctype html>
-
 <html lang="en-us">
-
+    
+<!--Include stylesheet and icons for bootstrap-->
 <head>
 
     <meta charset="UTF-8">
     <title>Sarah Jean Baptiste</title>
 
+    <!--Include stylesheet and icons for bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   
-    <link rel="stylesheet" href="css/styles.css" type="text/css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"> 
 
+    <!--Include local CSS-->
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+
+    <!--Include Google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
-
+    <!--Include scripts-->
     <script src="header.js"></script>
     <script src="footer.js"></script>
 
 </head>
-   
+<!--Body starts here--> 
 <body>
-
-    <header-component></header-component>
-
+<!--Include Header-->
+<header-component></header-component>
+    <!--Div to hold all content-->
     <div class="assign-container">
         <h3 class="app-header">Bucket List</h3>
-        <hr/>
+        <hr/><!--Horizontal line-->
+        <!--Bucket list-->
         <ol id="list">
             <li>Visit Haiti and see where my Husband grew up</li>
             <li>Learn Haitian Creole</li>
@@ -48,11 +53,9 @@
             <li>Travel to Africa</li>
             <li>Take a train down the coast of California and see the Giant Sequoia trees</li>
         </ol>
-        <hr>
     </div>
-
+<!--Include footer-->
 <footer-component></footer-component>
-
 </body>
 </html>
 
