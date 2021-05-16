@@ -1,4 +1,14 @@
- 
+/*
+==========================================
+  Title: header.js
+  Author: Professor Krasso
+  Date: 03/15/2021
+  Modified by: Sarah Jean Baptiste
+  Description: Theme JavaScript
+==========================================
+*/
+
+/* Create Header component */ 
 class Header extends HTMLElement
 {
     constructor() {
