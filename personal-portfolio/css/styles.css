@@ -1,8 +1,21 @@
+/*
+==========================================
+  Title: styles.css
+  Author: Sarah Jean Baptiste
+  Date: 05/15/2021
+  Description: CSS for Personal Portfolio
+==========================================
+*/
+
+/* Navigation Bar*/
+
+/* Navbar styling */
 .navbar {
     background-color:#d2c1c3;
     width: 100%;
 }
 
+/* Navbar items styling */
 .navbar li{
     display: inline-block;
     padding-right: 80px;
@@ -12,7 +25,9 @@
     font-family: 'Playfair Display', serif;
 }
 
+/* Hero-image */
 
+/* Hero-image styling */
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/background.jpg');
     height: 400px;
@@ -22,13 +37,17 @@
     position: relative;
   }
 
-  .hero-text {
+/* Hero-image text styling */
+.hero-text {
     position: absolute;
     color: white;
     font-family: 'Dawning of a New Day', cursive;
     margin-top: 15%;
 }
 
+/* Headings */
+
+/* Heading styling */
 h1{
     font-size: 60px;
     margin-left: 50px;
@@ -66,6 +85,10 @@ h5{
     margin-left: 10px;
     margin-left: 40px;
 }
+
+/* Main Content */
+
+/* Main paragraph styling */
 #main{
     padding:20px;
     margin-left: 20px;
@@ -77,6 +100,7 @@ h5{
     column-gap: 40px;
 }
 
+/* About paragraph styling */
 #about{
     font-family: 'Playfair Display', serif;
     font-style: italic;
@@ -89,6 +113,7 @@ h5{
 
 }
 
+/* Skills paragraph styling */
 #skills {
     font-family: 'Playfair Display', serif;
     line-height: 2;
@@ -96,6 +121,7 @@ h5{
     padding:20px;
 }
 
+/* Profile paragraph styling */
 #profile {
     font-family: 'Playfair Display', serif;
     line-height: 2.5;
@@ -103,6 +129,7 @@ h5{
     padding:20px;
 }
 
+/* Education paragraph styling */
 #education {
     font-family: 'Playfair Display', serif;
     line-height: 2.5;
@@ -110,6 +137,7 @@ h5{
     padding:20px;
 }
 
+/* Work paragraph styling */
 #work {
     font-family: 'Playfair Display', serif;
     line-height: 2.5;
@@ -117,6 +145,7 @@ h5{
     padding:20px;
 }
 
+/* List paragraph styling */
 #list {
     font-family: 'Playfair Display', serif;
     line-height: 2.5;
@@ -125,6 +154,7 @@ h5{
     margin-left: 20px;
 }
 
+/* Projects paragraph styling */
 #projects {
     font-family: 'Playfair Display', serif;
     line-height: 2.5;
@@ -133,6 +163,7 @@ h5{
     margin-top: -20px;
 }
 
+/* Project descriptions styling */
 #project-descriptions {
     font-family: 'Playfair Display', serif;
     line-height: 2;
@@ -142,22 +173,31 @@ h5{
     font-size: 14px;
 }
 
+/* ------------------------- */
+
+/* Card Styling */
 .card {
     border: none;
 }
 
+/* Vertical line Styling */
 .vl {
     border-right: 1px solid lightgray;
   }
 
+/* Container Styling */
 .container-fluid{
     padding: 20px;
 }
 
+/* Photo Styling */
 #family-photo{
     width: 100%;
 }
 
+/* Icons */
+
+/* Navbar icon styling */
 #icons {
     display: inline-block;
     width: 24%;
@@ -165,6 +205,18 @@ h5{
     text-align: center;
 }
 
+/* download icon Styling */
+#download-icon {
+    padding: 4px;
+}
+
+/* hyperlink icon Styling */
+#hyperlink {
+    padding: 6px;
+    color: black;
+}
+
+/* download button Styling */
 #download {
     font-family: 'Playfair Display', serif;
     font-size: 14px;
@@ -173,20 +225,15 @@ h5{
     margin-right: 40px;
 }
 
-#download-icon {
-    padding: 4px;
-}
+/* Footer */
 
-#hyperlink {
-    padding: 6px;
-    color: black;
-}
-
-#quick-links {
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-}
+/* Footer Styling */
 #footer{
     background-color:#d2c1c3;
 }
 
+/* quick-links Styling */
+#quick-links {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
