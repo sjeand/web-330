@@ -22,7 +22,7 @@ class Header extends HTMLElement
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item" style= "font-weight: 600;">
-                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="../index.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item" style= "font-weight: 600;">
                     <a href="about.html" class="nav-link">About</a>
@@ -41,6 +41,9 @@ class Header extends HTMLElement
                 </li>
                 <li class="nav-item" style= "font-weight: 600;">
                     <a href="bucketList.html" class="nav-link">Bucket List</a>
+                </li>
+                <li class="nav-item" style= "font-weight: 600;">
+                    <a href="../personal-portfolio/web-430/jeanBaptiste-tech-value-stream.html" class="nav-link">DevOp's Presentations</a>
                 </li>
             </ul>
         </div>
