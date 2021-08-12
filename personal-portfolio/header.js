@@ -43,7 +43,7 @@ class Header extends HTMLElement
                     <a href="bucketList.html" class="nav-link">Bucket List</a>
                 </li>
                 <li class="nav-item" style= "font-weight: 600;">
-                    <a href="../personal-portfolio/web-430/jeanBaptiste-tech-value-stream.html" class="nav-link">DevOp's Presentations</a>
+                    <a href="./web-430/devops-presentations.html" class="nav-link">DevOp's Presentations</a>
                 </li>
             </ul>
         </div>
