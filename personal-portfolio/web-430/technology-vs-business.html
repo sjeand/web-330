@@ -1,0 +1,59 @@
+<!--
+==========================================
+  Title: Index
+  Author: Sarah Jean Baptiste
+  Date: 05/14/2021
+  Description: home page
+==========================================
+-->
+
+<!doctype html>
+<html lang="en-us">
+    
+<!--Include stylesheet and icons for bootstrap -->
+<head>
+
+    <meta charset="UTF-8">
+    <title>Sarah Jean Baptiste</title>
+
+    <!--Include stylesheet and icons for bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"> 
+
+    <!--Include local CSS-->
+    <link rel="stylesheet" href="../css/styles.css" type="text/css">
+
+    <!--Include Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <!--Include scripts-->
+    <script src="../header.js"></script>
+    <script src="../footer.js"></script>
+
+</head>
+   
+<body>
+<!--Include header-->
+    <header-component></header-component>   
+    <!--Div to hold main content-->
+    <div class="assign-container">
+        <h3 class="app-header">Technology vs. Business Presentation</h3>
+            <hr> <!--Add horizontal line.-->
+            <div class="card">
+                <div class="card-body">
+                    <video controls autoplay reload="none" style="width:1000px;">
+                        <source src="../devops-presentations/jeanBaptiste-TechnologyVsBusiness.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
+            <form action="./devops-presentations.html" style= "color:#8b5158; font-weight: 500; padding: 20px; text-align: right;">
+                <input style= "color:#8b5158; font-weight: 500; padding: 10px;" type="submit" value="Return to Presentations" />
+            </form>
+    </div>
+    <!--Include footer-->
+    <footer-component></footer-component>
+</body>
+</html>
